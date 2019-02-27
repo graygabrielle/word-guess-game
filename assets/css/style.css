@@ -1,0 +1,15 @@
+html {
+    background-color: #ebebeb;
+    font-family: 'Nixie One', cursive;
+    font-weight: 800;
+    
+
+}
+
+.wrapper {
+    margin: 0 5%;
+    background-image: url("../images/typewriter2.jpg");
+    background-position: top center;
+    background-size: cover;
+    height: 100vh;
+}
