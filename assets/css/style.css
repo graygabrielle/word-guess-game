@@ -8,8 +8,22 @@ html {
 
 .wrapper {
     margin: 0 5%;
-    background-image: url("../images/typewriter2.jpg");
-    background-position: top center;
-    background-size: cover;
-    height: 100vh;
 }
+
+.title {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 50px;
+}
+
+.columns {
+    display: grid;
+    grid-template-columns: 29% 57% 14%;
+    background-image: url("../images/typewriter2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 90vh;
+
+}
+
+
