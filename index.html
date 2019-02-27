@@ -12,10 +12,11 @@
 </head>
 <body>
         <h1>Word Game</h1>
+        <h4>Press the button to start a new game. Then press one key at a time to guess what letters the mystery word contains. Be careful not to repeat your incorrect guesses!</h4>
         <div id="user-progress"></div>
         <div id="correctword"></div>
-        <div id="wrong-letters"></div>
-        <div>Number of chances left: <span id="chances">10</span></div>
+        <div>Incorrect Guesses:<span id="wrong-letters"></span></div>
+        <div>Chances Remaining: <span id="chances"></span></div>
         <div id="wins">Wins: <span id="numwins">0</span></div>
         <div id="loss">Losses: <span id="numloss">0</span></div>
         <button onclick="initializeGame()" id="button">Start a New Game</button>

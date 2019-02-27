@@ -4,6 +4,8 @@ let computerChoices = ["philosophy", "socialism", "demagogue", "historian", "bar
 
 let wins = 0;
 let losses = 0;
+let button = document.getElementById("button");
+
 
  function initializeGame() {
     let answerIndex = Math.floor((Math.random() * computerChoices.length));
@@ -12,9 +14,6 @@ let losses = 0;
     let chances = 10;
     let wrongLetters = [];
     let userProgress = [];
-    document.getElementById("wrong-letters").textContent = "";
-    document.getElementById("chances").textContent = chances;
-
     for(let i = 0; i < wordArray.length; i++){
         userProgress.push("_");
     }
@@ -23,7 +22,11 @@ let losses = 0;
     function render(){
         document.getElementById("user-progress").textContent = userProgress.join(" ");
     }
-    
+    document.getElementById("wrong-letters").textContent = "";
+    document.getElementById("chances").textContent = chances;
+    document.getElementById("user-progress").style.display = "block";
+    document.getElementById("correctword").innerText = "";
+ 
     document.onkeyup = function (event){
         let userInput = event.key.toLowerCase();
     
@@ -49,6 +52,14 @@ let losses = 0;
             losses++;
             document.getElementById("numloss").textContent = losses;
             alert("Better luck next time! Press the button to start over with a new word.");
+            if (computerChoices[0]===undefined) {
+                button.style.display = "none";
+                alert("You have used up all possible words!");
+
+            };
+
+            
+
         };
      
         if(userProgress.indexOf("_") === -1) {
@@ -56,9 +67,16 @@ let losses = 0;
             document.getElementById("numwins").textContent = wins;
             document.onkeyup = null;
             alert("Congratulations!");  
+
+            if (computerChoices[0]===undefined) {
+                button.style.display = "none";
+                alert("You have used up all possible words!");
+
+            };
         };
 
         render ();
      }
     
 }
+
