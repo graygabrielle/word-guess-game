@@ -17,21 +17,7 @@ html, body {
     display: grid;
     grid-template-columns: 1fr;
     height: 50px;
-
 }
-
-.columns {
-    display: grid;
-    grid-template-columns: 19% 62% 19%;
-    margin-left: 7%;
-    margin-right: 7%;
-    margin-top: 5vh;
-
-    height: 800px;
-
-}
-
-
 
 .header h1 {
     text-align: center;
@@ -40,16 +26,15 @@ html, body {
     color: #fe5531;
     padding: 10px;
     background-color: black;
- 
 }
 
-
-.middle {
-
+.columns {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-auto-rows:minmax(6vh, 6vh);
-    position: relative;
+    grid-template-columns: 19% 62% 19%;
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-top: 5vh;
+    height: 800px;
 }
 
 .first {
@@ -59,19 +44,11 @@ html, body {
     grid-gap: 50px;
 }
 
-
-#incorrect {
-
-    padding: 20px;
-    color: #fe5531;
-    font-weight: bolder;
-    font-size: 1.5em;
-    text-align: center;
-    background-color: black;
-    height: 150px;
-    width: 150px;
-    
-
+.middle {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows:minmax(6vh, 6vh);
+    position: relative;
 }
 
 .last {
@@ -79,26 +56,9 @@ html, body {
     display: grid;
     grid-template-rows: 20% 20%;
     grid-gap: 50px;
-
 }
-/* 
-#incorrect::before {
-    content: "";
-    background: black;
-    opacity: 0.75;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1;   
-    height: 200px;
-    border-radius: 20%;
 
-  } */
-
-    #remaining {
-
+#remaining {
     padding: 20px;
     color: #fe5531;
     font-weight: bolder;
@@ -107,108 +67,6 @@ html, body {
     background-color: black;
     height: 150px;
     width: 150px;
-    
-
-}
-
-/* #remaining::before {
-    content: "";
-    background: black;
-    opacity: 0.75;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1;   
-    height: 200px;
-    border-radius: 20%;
-
-  } */
-
-    #wins {
-
-    padding: 20px;
-    color: #fe5531;
-    font-weight: bolder;
-    font-size: 1.5em;
-    text-align: center;
-    background-color: black;
-    height: 150px;
-    width: 150px;
-    position: relative;
-    right: 0;
-   
-    
-
-}
-
-/* #wins::before {
-    content: "";
-    background: black;
-    opacity: 0.75;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: relative;
-    z-index: -1;   
-    height: 200px;
-    border-radius: 20%;
-
-  } */
-
-#losses {
-
-    padding: 20px;
-    color: #fe5531;
-    font-weight: bolder;
-    font-size: 1.5em;
-    text-align: center;
-    background-color: black;
-    height: 150px;
-    width: 150px;
-    position: relative;
-    right: 0;
-
-    
-
-}
-/* 
-#losses::before {
-    content: "";
-    background: black;
-    opacity: 0.75;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1;   
-    height: 200px;
-    border-radius: 20%;
-
-  } */
-#wrong-letters {
-    padding-top: 20px;
-    line-height: 140%;
-
-}
-
-#user-progress {
-
-    text-align: center;
-    font-size: 3em;
-    padding-top: 20px;
-
-}
-#correctword {
-
-    text-align: center;
-    font-size: 3em;
-    padding-top: 20px;
-    text-decoration: underline;
-
 }
 
 #chances {
@@ -216,15 +74,72 @@ html, body {
     line-height: 140%;
     font-size: 3em;
 }
+
+#incorrect {
+    padding: 20px;
+    color: #fe5531;
+    font-weight: bolder;
+    font-size: 1.5em;
+    text-align: center;
+    background-color: black;
+    height: 150px;
+    width: 150px;
+}
+
+#wrong-letters {
+    padding-top: 20px;
+    line-height: 140%;
+}
+
+#wins {
+    padding: 20px;
+    color: #fe5531;
+    font-weight: bolder;
+    font-size: 1.5em;
+    text-align: center;
+    background-color: black;
+    height: 150px;
+    width: 150px;
+    position: relative;
+    right: 0;
+}
+
 #numwins {
     padding-top: 20px;
     line-height: 140%;
     font-size: 3em;
 }
+
+#losses {
+    padding: 20px;
+    color: #fe5531;
+    font-weight: bolder;
+    font-size: 1.5em;
+    text-align: center;
+    background-color: black;
+    height: 150px;
+    width: 150px;
+    position: relative;
+    right: 0;
+}
+
 #numloss {
     padding-top: 20px;
     line-height: 140%;
     font-size: 3em;
+}
+
+#user-progress {
+    text-align: center;
+    font-size: 3em;
+    padding-top: 20px;
+}
+
+#correctword {
+    text-align: center;
+    font-size: 3em;
+    padding-top: 20px;
+    text-decoration: underline;
 }
 
 #button {
@@ -237,5 +152,4 @@ html, body {
     border-radius: 10px;
     width: 150px;
     height: 50px;
-
 }

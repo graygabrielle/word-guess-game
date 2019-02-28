@@ -1,14 +1,16 @@
 
-
+// alert immediately
 alert("Press the start button to begin the game!")
 
-let computerChoices = ["philosophy", "socialism", "demagogue", "historian", "barbarian", "benevolent", "chartreuse"];
 
+//setting global variables
+let computerChoices = ["philosophy", "socialism", "demagogue", "historian", "barbarian", "benevolent", "chartreuse"];
 let wins = 0;
 let losses = 0;
 let button = document.getElementById("button");
 
 
+// This is one huge function that runs the whole game
  function initializeGame() {
     let answerIndex = Math.floor((Math.random() * computerChoices.length));
     let word = computerChoices.splice(answerIndex, 1);
@@ -20,7 +22,7 @@ let button = document.getElementById("button");
         userProgress.push("_");
     }
     render();
-    
+    // this function updates the user's progress on screen as they are guessing the word
     function render(){
         document.getElementById("user-progress").textContent = userProgress.join(" ");
     }
@@ -45,7 +47,7 @@ let button = document.getElementById("button");
             chances--;
             document.getElementById("chances").textContent = chances;
         };
-    
+    // to lose
         if (chances === 0) {
     
             document.getElementById("user-progress").style.display = "none";
@@ -64,7 +66,7 @@ let button = document.getElementById("button");
             
 
         };
-     
+    //  to win
         if(userProgress.indexOf("_") === -1) {
             wins++;
             document.getElementById("numwins").textContent = wins;
