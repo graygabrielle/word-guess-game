@@ -16,28 +16,38 @@
 <body>
     <div class="wrapper">
         <div class="title">
-            <h1>Word Game</h1>
-            <button onclick="initializeGame()" id="button">Start a New Game</button>
+            <div class="header">
+                <h1>Word Guessing Game</h1>
+            </div>
+            
+
         </div>
         <div class="columns">
 
             <div class="first">
-                <div>Incorrect Guesses:<span id="wrong-letters"></span></div>
+                    <div id="remaining">Chances Remaining: <div id="chances"></div></div>
+                <div id="incorrect">Incorrect Guesses:<div id="wrong-letters"></div></div>
             </div>
 
             <div class="middle">
-                <div id="user-progress"></div>
-                <div id="correctword"></div>
+                  
+                <div id="user-progress"></div>   
+                <div id="correctword"></div> 
+                <div class="button">
+                    <div style= "visibility: hidden;">1</div>
+                    <button onclick="initializeGame()" id="button">Start a New Game</button></div>
+    
             </div>
             
             <div class="last">
-                <div>Chances Remaining: <span id="chances"></span></div>
-                <div id="wins">Wins: <span id="numwins">0</span></div>
-                <div id="loss">Losses: <span id="numloss">0</span></div>
+                <div id="wins">Wins: <div id="numwins">0</div></div>
+                <div id="losses">Losses: <div id="numloss">0</div></div>
             </div>
         
             
         </div>
+
+    
     </div>
         <script type="text/javascript" src="./assets/javascript/game.js">
         </script>
