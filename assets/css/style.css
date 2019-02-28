@@ -195,27 +195,38 @@ html {
 }
 
 #user-progress {
-    position: relative;
+
     text-align: center;
-    font-size: 2em;
+    font-size: 3em;
     padding-top: 20px;
+
+}
+#correctword {
+
+    text-align: center;
+    font-size: 3em;
+    padding-top: 20px;
+    text-decoration: underline;
 
 }
 
 #chances {
-    padding-top: 20px;
+    padding-top: 10px;
     line-height: 140%;
+    font-size: 3em;
 }
 #numwins {
     padding-top: 20px;
     line-height: 140%;
+    font-size: 3em;
 }
 #numloss {
     padding-top: 20px;
     line-height: 140%;
+    font-size: 3em;
 }
 
-.button {
+#button {
     padding: 20px;
     color: black;
     font-weight: 900;

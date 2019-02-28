@@ -1,5 +1,7 @@
 
 
+alert("Press the start button to begin the game!")
+
 let computerChoices = ["philosophy", "socialism", "demagogue", "historian", "barbarian", "benevolent", "chartreuse"];
 
 let wins = 0;
@@ -51,11 +53,12 @@ let button = document.getElementById("button");
             document.onkeyup = null;
             losses++;
             document.getElementById("numloss").textContent = losses;
-            alert("Better luck next time! Press the button to start over with a new word.");
-            if (computerChoices[0]===undefined) {
+            if (computerChoices[0]) {
+                alert("Better luck next time! Press the button to start over with a new word."); 
+            }; 
+            if (!computerChoices[0]) {
                 button.style.display = "none";
                 alert("You have used up all possible words!");
-
             };
 
             
@@ -66,12 +69,12 @@ let button = document.getElementById("button");
             wins++;
             document.getElementById("numwins").textContent = wins;
             document.onkeyup = null;
-            alert("Congratulations!");  
-
-            if (computerChoices[0]===undefined) {
+            if (computerChoices[0]) {
+            alert("Congratulations! Press start again to restart the game with a new word!"); 
+            }; 
+            if (!computerChoices[0]) {
                 button.style.display = "none";
                 alert("You have used up all possible words!");
-
             };
         };
 
